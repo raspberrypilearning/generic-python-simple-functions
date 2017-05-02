@@ -1,76 +1,59 @@
-# New project
+## Creating Simple Functions in Python
 
-Each project contains a set of directories for each language, you're set up now with an `en` directory that contains the necessary files to get you going.
+Sometimes you will want to use the same few lines of code, multiple times within your script. Alternatively, you want to have the same few lines of code run, every time a certain event occurs; maybe when a user presses a certain key, or types a specific bit of text. Either way, it's at such times that you might want to consider using a **function**
 
-* [meta.yml](#metayml)
-* [Steps - step_1.md, step_2.md, etc](#steps)
+Functions are **named** blocks of code that perform a specific task. Just about the simplest function you could create in Python would look like this:
 
-
-## meta.yml
-
-The `meta.yml` file sets lots of basic information for the project.
-
-``` yml
-title: The title of the project
-hero_image: images/banner.png # The image used on the listing view
-subtitle: Project subtitle # Used on the listing view
-description: Project description # Used on the listing view
-published: false # A boolean - `true` or`false` - that controls whether the project will appear on the listing view
-steps: # A list of all the steps
-  - title: How to get started # Used as the sidebar title for the step
-    duration: 60 # Not used yet
+```python
+def hello():
+    print('Hello World!')
 ```
 
-## Steps
+You tell Python that you're creating a new function by using the `def` keyword, followed by the name of the function. In this case it was called `hello`. The parenthesis after the function name are important, and if you want to know more about why they are included, then have a look at [this resource on using parameters](LINK TO RESOURCE).
 
-* [Links](#links)
-* [Resources](#resources)
-* [Images](#images)
-* [Definitions](#definitions)
-* [Hints](#hints)
+The colon at the end of that line indicates that the code that is inside the function will be indented below the line, just like in a `for` or `while` loop or an `if`/`elif`/`else` conditional.
 
-Project steps are written in the [Kramdown](https://kramdown.gettalong.org/) variety of markdown. There is a [quick reference guide](https://kramdown.gettalong.org/quickref.html) and [full syntax documentation](https://kramdown.gettalong.org/syntax.html).
+You can **call** a function by typing it's name with the parenthesis included. So to run this function you would type `hello()`. Here's the complete program.
 
-### Links, resources & images
+*[call]: run the lines of code within the function
 
-See [kramdown documentation](https://kramdown.gettalong.org/quickref.html#links-and-images) for more details.
+```python
+def hello():
+    print('Hello World!')
 
-#### Links
-
-A [link](http://kramdown.gettalong.org) to the kramdown homepage.
-
-#### Resources
-
-A [link to a file in the resources directory](resources/worksheet.pdf){:download='filename.pdf'}. The download part will make the file automatically download rather than be rendered in the browser, the filename you'd like the file to be saved with is the second bit after the `=`. The `/slash learning` application will ensure the resource is available.
-
-#### Images
-
-![Banner image](images/banner.png) - the link text becomes the alternative text for the image. The `/slash learning` application will ensure the image is available.
-
-### Definitions
-
-Definitions can be written using HTML abbreviations, which are a standard part of [kramdown](https://kramdown.gettalong.org/quickref.html#abbreviations)
-
-```
-To do this you might require a variable or a two word definition.
-
-*[variable]: An object that has a name and stores a value.
-
-*[two word]: Definitions are markdown, and can have [links](http://kramdown.gettalong.org) etc
+hello()
 ```
 
+You can have multiple lines of code inside a function if you like, but you should be careful about using variables. Any variable inside a function is said to be **local** to that function. That is, the any code outside of the function won't have access to variable inside the function. For instance here is a simple function:
 
-### Hints
-
-Still very much a work in progress, but here's how you could get one to work currently. The id `#hint-1` on the heading and the class `.hint-1` on the body must match up.
-
+```python
+def say_hello():
+    word = "Hello"
+	print(word)
 ```
-### Hint
-{: .hint-heading #hint-1 }
 
-Here's a hint of how to do this project. Just a change to force an update.
-{: .hint-content .hint-1 }
+The variable `word` is local to the function. We say that the variable is in the functions' **scope**. That means you can't use that variable outside of the function. For instance, this code would error.
 
-And a little more text for the first hint.
-{: .hint-content .hint-1 }
+```python
+def say_hello():
+    word = "Hello"
+	print(word)
+
+print(word)
 ```
+
+This errors because the variable `word` is outside of the scope of the main program. Here's another example:
+
+```python
+word = "Goodbye"
+
+def say_hello():
+    word = "Hello"
+	print(word)
+
+print(word)
+```
+
+Here, the word `Goodbye` will be printed, as the variable `word` is now also a **Global** variable that is in the scope of the main program.
+
+
