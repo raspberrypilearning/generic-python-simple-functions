@@ -57,3 +57,4 @@ print(word)
 Here, the word `Goodbye` will be printed, as the variable `word` is now also a **Global** variable that is in the scope of the main program.
 
 
+
