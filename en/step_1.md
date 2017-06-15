@@ -1,7 +1,5 @@
---- step ---
----
-title: Creating Simple Functions in Python
----
+## Creating Simple Functions in Python
+
 Sometimes you will want to use the same few lines of code, multiple times within your script. Alternatively, you want to have the same few lines of code run, every time a certain event occurs; maybe when a user presses a certain key, or types a specific bit of text. Either way, it's at such times that you might want to consider using a **function**
 
 Functions are **named** blocks of code that perform a specific task. Just about the simplest function you could create in Python would look like this:
@@ -25,6 +23,5 @@ def hello():
 
 hello()
 ```
---- /step ---
 
 
