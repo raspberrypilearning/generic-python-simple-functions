@@ -1,10 +1,10 @@
-title: generic-python-simple-functions
+title: Creating and calling functions in Python
 hero_image: images/banner.png
-subtitle: generic-python-simple-functions subtitle
-description: generic-python-simple-functions description
+description: Learn how to create and call a function
 original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: cc-prototype
 published: false
+ingredient: true
 steps:
   - title: Step one
-    duration: 60
+
