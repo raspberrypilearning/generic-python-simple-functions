@@ -1,4 +1,4 @@
-title: generic-python-simple-functions
+title: Creating simple functions
 hero_image: images/banner.png
 subtitle: generic-python-simple-functions subtitle
 description: generic-python-simple-functions description
@@ -6,5 +6,4 @@ original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: cc-prototype
 published: false
 steps:
-  - title: Step one
-    duration: 60
+  - title: Simple functions
